@@ -1,0 +1,12 @@
+<div ng-controller="konfiguracijaCtrl">
+	<div>
+		<form>
+				proizvodjac: <select ng-options="proizvodjac.naziv for proizvodjac in proizvodjaci track by proizvodjac.id" ng-model="newKonfiguracija.model.proizvodjac" class="form-control" ng-change="ucitajModele()"></select>
+				model: <select ng-options="model.naziv for model in modeli track by model.id" ng-model="newKonfiguracija.model" class="form-control"></select>
+				RAM: <input ng-model="newKonfiguracija.ram" class="form-control">
+				Cena: <input ng-model="newKonfiguracija.cena" class="form-control">
+				
+				<button class="btn btn-primary" ng-click="save()">sacuvaj</button>
+			</form>
+	</div>
+</div>
